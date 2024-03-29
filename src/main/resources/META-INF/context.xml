@@ -1,0 +1,55 @@
+<Context>
+    <Resource name="jdbc/feedbackDB"
+              auth="Container"
+              type="javax.sql.DataSource"/>
+    <ResourceParams name="jdbc/feedbackDB">
+        <parameter>
+            <name>factory</name>
+            <value>org.apache.commons.dbcp.BasicDataSourceFactory</value>
+        </parameter>
+        <parameter>
+            <name>maxActive</name>
+            <value>10</value>
+        </parameter>
+        <parameter>
+            <name>maxIdle</name>
+            <value>5</value>
+        </parameter>
+        <parameter>
+            <name>validationQuery</name>
+            <value>SELECT 1</value>
+        </parameter>
+        <parameter>
+            <name>testOnBorrow</name>
+            <value>true</value>
+        </parameter>
+        <parameter>
+            <name>testWhileIdle</name>
+            <value>true</value>
+        </parameter>
+        <parameter>
+            <name>timeBetweenEvictionRunsMillis</name>
+            <value>10000</value>
+        </parameter>
+        <parameter>
+            <name>minEvictableIdleTimeMillis</name>
+            <value>60000</value>
+        </parameter>
+        <parameter>
+            <name>username</name>
+            <value>root</value>
+        </parameter>
+        <parameter>
+            <name>password</name>
+            <value>Pasword1!</value>
+        </parameter>
+        <parameter>
+            <name>driverClassName</name>
+            <value>com.mysql.cj.jdbc.Driver</value>
+        </parameter>
+        <parameter>
+            <name>url</name>
+            <value>jdbc:mysql://localhost:3306/feedback_db</value>
+        </parameter>
+    </ResourceParams>
+</Context>

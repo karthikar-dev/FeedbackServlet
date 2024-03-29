@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Web Application Deployment Descriptor -->
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!-- Servlet Configuration -->
+    <servlet>
+        <!-- Define Servlet Name -->
+        <servlet-name>FeedbackServlet</servlet-name>
+        <!-- Specify Servlet Class -->
+        <servlet-class>com.feedback.servlet.FeedbackServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <!-- Map Servlet Name to URL Pattern -->
+        <servlet-name>FeedbackServlet</servlet-name>
+        <!-- Specify URL Pattern for Servlet -->
+        <url-pattern>/submitFeedback</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome File Configuration -->
+    <welcome-file-list>
+        <!-- Specify Default Welcome File -->
+        <welcome-file>feedback-form.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>
